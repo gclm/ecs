@@ -1,0 +1,298 @@
+# Instincts generated from https://github.com/gclm/ecs
+# Generated: 2026-07-13T22:42:08.192Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: ecs-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/ecs
+---
+
+# Ecs Commit Length
+
+## Action
+
+Keep commit messages concise (~26 characters)
+
+## Evidence
+
+- Average commit message length: 26 chars
+- Based on 2 commits
+
+---
+id: ecs-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/ecs
+---
+
+# Ecs Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: ecs-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/ecs
+---
+
+# Ecs Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: ecs-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/ecs
+---
+
+# Ecs Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: ecs-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/ecs
+---
+
+# Ecs Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: ecs-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct File Naming
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.files
+
+---
+id: ecs-instinct-function-naming
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: ecs-instinct-class-naming
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: ecs-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: ecs-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: ecs-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: ecs-instinct-commit-format
+trigger: "When writing a git commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Commit Format
+
+## Action
+
+Start the message with a lowercase type (e.g., feat, fix) followed by a colon and description
+
+## Evidence
+
+- Seen in commit: 'feat：修复一些隐藏bug，增加赞助商'
+- Seen in commit: 'fix：修复协议写死导致的文件大小获取问题，兼容旧逻辑回退使用'
+
+---
+id: ecs-instinct-commit-language
+trigger: "When writing a git commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Commit Language
+
+## Action
+
+Write the commit message in Chinese
+
+## Evidence
+
+- Seen in commit: 'feat：修复一些隐藏bug，增加赞助商'
+- Seen in commit: 'fix：修复协议写死导致的文件大小获取问题，兼容旧逻辑回退使用'
+
+---
+id: ecs-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: ecs-instinct-archive-folder
+trigger: "When archiving or deprecating code"
+confidence: 0.7
+domain: architecture
+source: repo-analysis
+source_repo: gclm/ecs
+---
+
+# Ecs Instinct Archive Folder
+
+## Action
+
+Move files to the 'archive' folder
+
+## Evidence
+
+- Pattern in architecture.folderStructure.commonFolders
+
